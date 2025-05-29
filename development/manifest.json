@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "FocusFlow --Focus & Productivity Timer",
+    "version": "1.0",
+    "description": "Stay in the zone and get more done with FocusFlow. This powerful Pomodoro-based productivity extension helps you block distracting websites, manage your time, and stay focused on what matters. Whether you're studying, working, or creating, FocusFlow helps you build deep work habits and conquer your to-do list with clarity and control.",
+    "action": {
+        "default_popup": "templates/popup.html",
+        "default_icon": {
+            "16": "assets/icons/icon-16.png",
+            "32": "assets/icons/icon-32.png",
+            "48": "assets/icons/icon-48.png",
+            "128": "assets/icons/icon-128.png"
+        }
+    },
+    "background": {
+        "service_worker": "src/background/background.js"
+    },
+    "icons": {
+        "16": "assets/icons/icon-16.png",
+        "32": "assets/icons/icon-32.png",
+        "48": "assets/icons/icon-48.png",
+        "128": "assets/icons/icon-128.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["src/content/content.js"]
+        }
+    ],
+
+    "permissions": ["storage", "notifications"]
+}

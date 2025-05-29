@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+    min-width: 350px;
+    font-family: Arial, sans-serif;
+    @apply text-secondary;
+} */
+
+.parentclass {
+    min-width: 300px;
+    font-family: Arial, sans-serif;
+    @apply text-secondary;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-item {
+    @apply flex items-center justify-center flex-auto gap-1 border-b-[3px] border-b-dark py-2 text-center cursor-pointer whitespace-nowrap text-[13px] font-medium;
+}
+
+.active {
+    @apply relative border-b-primary text-primary-text;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.timer-btn {
+    @apply border border-[#565e6c6e] rounded-full py-2 px-2.5 text-center font-bold;
+}
+
+.blocked-container {
+    &::-webkit-scrollbar {
+        @apply w-1 h-1;
+    }
+
+    &::-webkit-scrollbar-track {
+        @apply bg-grey;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        @apply bg-dark rounded-[5px];
+    }
+
+    /* &::-webkit-scrollbar-thumb:hover {
+        @apply bg-primary-hover;
+    } */
+}
+
+.blocked-list {
+    @apply flex flex-col items-start mb-2;
+}
+
+.blocked-list li {
+    @apply w-full py-2 text-black font-medium text-[12px];
+
+    &:not(:last-child) {
+        @apply border-b border-b-tertiary;
+    }
+}
+
+.pause-play{
+    @apply p-1.5 rounded-full cursor-pointer bg-dark capitalize hover:bg-[#414451c0] disabled:bg-tertiary
+}
