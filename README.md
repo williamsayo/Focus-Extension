@@ -11,16 +11,18 @@ The idea is simple, when you work or study using your computer, there are so muc
 -   Tailwind
 
 ## Setup
-
-`npm install`
-
+```bash
+npm install
+```
 ## Build
-
-`npm run build`
+```bash
+npm run build
+```
 
 ## Build in watch mode
-
-`npm start`
+```bash
+npm start
+```
 
 ### Installation
 
